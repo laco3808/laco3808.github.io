@@ -15,10 +15,26 @@ h2 {
   font-size: 1.3em;
 }
 
-p,ul,ol,dl,address {
+p,ul,dl,address {
   font-size: 1.1em;
 }
 
 p, li, dd, dt, address {
   line-height: 1.5;
+}
+ol {
+  counter-reset: item;
+}
+
+ol > li {
+  counter-increment: item;
+}
+
+ol ol > li {
+  display: block;
+}
+
+ol ol > li:before {
+  content: counters(item, ".") ". ";
+  margin-left: -20px;
 }
