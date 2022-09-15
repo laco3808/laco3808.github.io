@@ -30,6 +30,7 @@
 
       a:hover {
         text-decoration: none;
+        color: green;
       }
       ul{
         font-size: 1.1em;
