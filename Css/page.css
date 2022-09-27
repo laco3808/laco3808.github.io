@@ -1,0 +1,77 @@
+body {
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+  }
+  article{
+    padding: 16px;
+  }
+  aside{
+    padding: 16px;
+  }
+
+  img {
+      max-width: 100%;
+      display: block;
+  }
+  
+  .logo {
+    font-size: 200%;
+    font-family: Helvetica, serif;
+    padding: 50px 20px;
+    margin: 0 auto;
+    max-width: 980px;
+  }
+  
+  .grid {
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 980px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px
+  }
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  #navbar a.active {
+    background-color: #a70707;
+    color: white;
+  }
+  #navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: right;
+    padding: 14px;
+    text-decoration: none;
+  }
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+  }
+  
+  .sticky + article {
+    padding-top: 60px;
+  }
+  
+  .photos {
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+  }
+  #Balloon1{
+    float: left;
+    padding-right: 20px;
+  }
+
+  .feature {
+      width: 200px;
+  }
