@@ -16,8 +16,6 @@ body {
     font-style: normal;
     padding: 1em;
     margin: 0; 
-    border: 0.1em solid rgb(116, 116, 116);
-    border-radius: .1em;
 }
 article {
     position: relative;
@@ -31,33 +29,33 @@ h1 {
     text-align: left;
     color: rgb(67, 234, 16);
     font-size: 2em;
-    font-family: Garamond, serif;
+    font-family: 'Oswald', serif;
 }
 
 h2 {
     color: rgb(0, 242, 255);
     font-size: 1.7em;
-    font-family: Garamond, serif;
+    font-family: 'Oswald', serif;
 }
 h3 {
     color: rgb(254, 7, 217);
     font-size: 1.6em;
-    font-family: Garamond, serif;
+    font-family: 'Oswald', serif;
 }
 h4 {
     color: rgb(255, 238, 0);
     font-size: 1.5em;
-    font-family:Garamond, serif;
+    font-family:'Oswald', serif;
 }
 h5 {
     color: rgb(255, 0, 0);
     font-size: 1.3em;
-    font-family: Garamond, serif;
+    font-family: 'Oswald', serif;
 }
 h6 {
     color: rgb(157, 0, 255);
     font-size: 1.3em;
-    font-family: Garamond, serif;
+    font-family: 'Oswald', serif;
 }
 p {
     font-family: 'PT Mono', monospace;
@@ -113,5 +111,80 @@ body img{
     max-height:100%;
     height: 18em;
     margin-right: 3em;
+}  
+nav{
+    background-color:rgb(67, 234, 16);;
+    padding: 20px;
+    height: 20px;
+    position:sticky;
+    top:0;
 }
-
+nav ul{
+    margin:50em;
+    padding:0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+nav a{
+    color:fff;
+    text-decoration: none;
+    padding:.5em 1em;
+}
+.grid{
+    margin :0;
+    padding:0;
+    max-width: 980px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+}
+@media screen and (max-width: 600px) {
+    body {
+      font-size: 12px;
+      float: bottom;
+    }
+    body img{
+    float: right;
+    max-height:100%;
+    height: 25em;
+    margin-right: 1em;
+    padding: 1.5em;
+    }
+    nav{
+        background-color:#5c09af;;
+        padding: 5px;
+        font-size: 10px;
+        height: 5px;
+        font-size: 6px;
+        position:relative;
+        bottom:0;
+    }
+    nav ul{
+        margin:10em;
+        padding:0;
+        list-style:none;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    nav a{
+        color:#fff;
+        text-decoration: none;
+        padding:.5em 1em;
+    }
+  }
+  @media screen and (min-width: 900px) {
+    article {
+      font-size: 12px;
+    }
+    body img{
+        float: left;
+        max-height:100%;
+        height: 18em;
+        margin-right: 3em;
+    } 
+    body{
+        border: 0.1em solid rgb(116, 116, 116);
+        border-radius: .1em;
+    }
+  }
