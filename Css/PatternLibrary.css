@@ -188,6 +188,10 @@ nav a{
       font-size: 12px;
       float: bottom;
     }
+    body p{
+        width:650px;
+        margin-right: 2em;
+    }
     h1{
         left:0px;
         margin-right: 5em;
@@ -270,9 +274,9 @@ nav a{
         margin-bottom: .25em;
         height: 30em;
     }
-    #AboutP{
+    /*#AboutP{
         width:fit-content;
-    }
+    }*/
   }
   @media screen and (min-width: 1900px) {
     article {
