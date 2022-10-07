@@ -207,6 +207,7 @@ nav a{
         background-color:#5c09af;;
         padding-bottom: 5px;
         font-size: 20px;
+        width: max-content;
         height: 50px;
         position:relative;
     }
@@ -250,6 +251,27 @@ nav a{
         padding-top: 4em;
         height: 12em;
         width: 12em;
+    }
+    #JacketH{
+        margin-left: 0;
+        margin-right: 1em;
+    }
+    #Wearable{
+        margin-left: 0;
+
+    }
+    #ArtH1,#ArtH2{
+        margin-right:0;
+    }
+    #MeIMG{
+        padding-right: 20px;
+        padding-top: 20px;
+        margin-right: 1em;
+        margin-bottom: .25em;
+        height: 30em;
+    }
+    #AboutP{
+        width:fit-content;
     }
   }
   @media screen and (min-width: 1900px) {
