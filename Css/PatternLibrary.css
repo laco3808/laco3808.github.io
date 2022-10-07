@@ -109,10 +109,53 @@ ol li{
 body img{
     float: left;
     max-height:100%;
+    
+}
+#JacketH{
+    margin-left: 8em;
+    margin-right: 5em;
+}
+#Wearable{
+    position: center;
+    margin-left: 12.5em;
+    margin-right: 5em;
+}
+#MeIMG{
+    padding-right: 20px;
+    padding-top: 70px;
+    margin-right: 1em;
+    margin-bottom: 3em;
     height: 18em;
-    margin-right: 3em;
-}  
+}
+#LiBo{
+    float: right;
+    top: 100px;
+    margin-right: 10em;
+    margin-left: 10em;
+    padding-bottom: 20em;
+    padding-top: 10em;
+    height: 12em;
+    width: 12em;
+}
+.photos {
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+  }  
+  #BaoDragon, #CupDragon, #TribalBun, #Buff, #Unmask, #AAPI{
+    height: 40em;
+    width: 40em;
+  }
+  #Jacket1, #Jacket2,#Jacket3 ,#Jacket4{
+    height: 40em;
+    width: 40em;
+  }
 nav{
+    z-index: 1;
     background-color:rgb(67, 234, 16);;
     padding: 20px;
     height: 20px;
