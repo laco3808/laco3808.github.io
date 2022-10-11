@@ -3,9 +3,8 @@
 html {
     font-family: 'Times New Roman', Garamond, Helvetica, serif;
     font-size: 20px;
-    background-color: #fff;
     /* background: linear-gradient(rgb(184, 148, 255)0%,rgb(218, 208, 224)15%,rgb(204, 185, 215) 85%, rgb(184, 148, 255)100%); */
-    background: #000;
+    background-color: #000;
 
 }
 body {
@@ -23,7 +22,6 @@ article {
     padding: 1em;
     width: 50em;
     margin-left: 3em;
-    color: #fff
 }
 h1 {
     text-align: left;
@@ -136,6 +134,21 @@ body img{
     padding-top: 10em;
     height: 12em;
     width: 12em;
+}
+#centered{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+#centered img{
+    padding-top: 20px;
+}
+#centered img:hover{
+    cursor: pointer; 
+}
+#navbar{
+    z-index: 1;
 }
 .photos {
     z-index: 0;
