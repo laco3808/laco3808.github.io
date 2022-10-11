@@ -1,8 +1,3 @@
-let body = document.querySelector('body');
-body.addEventListener('click', giveAlert);
-function giveAlert(){
-    alert('this is an alert');
-}
 window.onscroll = function() {myFunction()};
 var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
@@ -15,8 +10,13 @@ function myFunction() {
     }
 }
 function show() {
-    document.getElementById('Croissant')
+ 
+    /* Get image and change value
+    of src attribute */
+    let image = document.getElementById("Croissant");
 
-    document.getElementById('Croissants')
+    image.src ="../img/Croissant"
+
+    document.getElementById("CButton")
             .style.display = "none";
 }
