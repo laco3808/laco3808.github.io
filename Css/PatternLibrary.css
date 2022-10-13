@@ -22,6 +22,8 @@ article {
     padding: 1em;
     width: 50em;
     margin-left: 3em;
+    word-break: break-all;
+    overflow-wrap: break-word; 
 }
 h1 {
     text-align: left;
