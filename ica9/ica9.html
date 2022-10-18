@@ -13,6 +13,9 @@
         transform: translate(-50%,-50%);
         width: 200px;
         background: rgb(67, 234, 16);
+        border: 3px;
+        border-color: blueviolet;
+        padding: 10px;
       }
 
       .msgBox p {
@@ -23,14 +26,14 @@
 
       .msgBox button {
         background: none;
-        border: none;
         position: absolute;
         top: 0;
         right: 0;
         font-size: 1.1rem;
         color: rgb(254, 7, 217);
       }
-      #button{
+      #Display{
+        z-index: 1;
         background-color: rgb(254, 7, 217);
         border-radius: 12px;
         padding: 32px 16px;
@@ -42,12 +45,57 @@
         justify-content: center;
         align-items: center; 
       }
+      #Text{
+        z-index: 0;
+        position: absolute;
+        top: 10px;
+        right: left;
+      }
 
     </style>
   </head>
   <body>
-    <button id="button">Display message box</button>
+    <p id="Text"> </p> 
+    <button id="Display">DO NOT PRESS (OR DO)</button>
+    
+    
 
-    <script scr="ica9.js"></script>
+    <script>
+        const OhNo =  document.getElementById("Text");
+        document.getElementById("Text").style.visibility="hidden";
+        const btn = document.querySelector('button');
+        btn.addEventListener('click', displayMessage);
+        function randomValueFromArray(array){
+            const random = Math.floor(Math.random()*array.length);
+            return array[random];
+        }
+        const insertX = ["GOOD JOB PRESSING THE BUTTON","WHY WOULD YOU PRESS THE BUTTON??!!","SOMEBODY DECIDED TO PRESS THE BUTTON..."];
+        
+        function displayMessage(msgText) {
+            const xItem = randomValueFromArray(insertX);
+            const body = document.body;
+
+            const panel = document.createElement('div');
+            panel.setAttribute('class','msgBox');
+            body.appendChild(panel);
+
+            document.getElementById("Display").style.visibility="hidden";
+            document.getElementById("Text").innerHTML = "UH OH.YOU PRESSED IT, DIDN'T YOU...";
+            document.getElementById("Text").style.visibility="visible";
+
+
+            const msg = document.createElement('p');
+            msg.textContent = xItem;
+            panel.appendChild(msg);
+            const closeBtn = document.createElement('button');
+            closeBtn.textContent = 'X';
+            panel.appendChild(closeBtn);
+            closeBtn.addEventListener('click', () => {
+                panel.parentNode.removeChild(panel);
+                document.getElementById("Display").style.visibility="visible";
+                document.getElementById("Text").style.visibility="hidden";
+            }); 
+        }
+    </script>
   </body>
 </html>
