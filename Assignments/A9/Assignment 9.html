@@ -5,17 +5,73 @@
 
     <title>Image gallery</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../Css/PatternLibrary.css">
+    <style>
+      .full-img {
+        position: relative;
+        display: block;
+        padding-left: 150px;
+        width: 640px;
+        height: 480px;
+
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+      }
+      .displayed-img{
+        position: relative;
+        display: block;
+        padding-left: 275px;
+        width: 400px;
+        height: 400px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+      }
+      .overlay {
+        position: absolute;
+        padding-left: 275px;
+        width: 400px;
+        height: 400px;
+        display:flex;
+        background-color: rgba(0,0,0,0);
+      }
+      .thumb-bar img {
+        display: block;
+        width: 20%;
+        float: left;
+        cursor: pointer;
+      }
+      #Button {
+        font-family:'PT Mono', monospace;
+        color: white;
+        padding: 10px 10px;
+        border-radius: 3px;
+        border: 0;
+        background-color: #375177;
+        text-shadow: 1px 1px 1px white;
+        border: 1px solid #999;
+        position: absolute;
+        cursor: pointer;
+        top: -10px;
+        left: 560px;
+      }
+      #Header{
+        text-align: center;
+      }
+    </style>
     
   </head>
 
   <body>
-    <h1>Image gallery example</h1>
+    <h1 id="Header">Image gallery example</h1>
 
     <div class="full-img">
-      <img class="displayed-img" src="images/pic1.jpg" alt="Closeup of a human eye">
+      <img class="displayed-img" src="../../img/Croissant.jpg" alt="A Croissant">
       <div class="overlay"></div>
-      <button class="dark">Darken</button>
+      <button class="dark" id="Button">Darken</button>
     </div>
 
     <div class="thumb-bar">

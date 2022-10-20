@@ -83,6 +83,8 @@ link:hover {
 }
 button{
     color: #375177;
+    padding: 10px 10px;
+    border-radius: 12px;
 }
 button:hover {
     color: #7e8ca0;
