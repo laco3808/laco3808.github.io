@@ -16,9 +16,9 @@ const newImage = document.createElement('img');
 newImage.setAttribute('src', `../../img/${image}`);
 newImage.setAttribute('alt', Alt[image]);
 thumbBar.appendChild(newImage);
-newImage.addEventListener('click',e => {
-    displayedImage.src = e.target.src;
-    displayedImage.alt = e.target.alt;
+newImage.addEventListener('click',replace => {
+    displayedImage.src = replace.target.src;
+    displayedImage.alt = replace.target.alt;
   });
 }
 
