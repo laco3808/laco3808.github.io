@@ -53,6 +53,19 @@ class Ball {
         this.x += this.velX;
         this.y += this.velY;
       }
+      collisionDetect() {
+        for (const ball of balls) {
+          if (this !== ball) {
+            const dx = this.x - ball.x;
+            const dy = this.y - ball.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+      
+            if (distance < this.size + ball.size) {
+              ball.color = this.color = randomRGB();
+            }
+          }
+        }
+      }
 }
 const balls = [];
 
@@ -63,8 +76,8 @@ while (balls.length < 50) {
     // away from the edge of the canvas, to avoid drawing errors
     random(0 + size, width - size),
     random(0 + size, height - size),
-    random(-7, 7),
-    random(-7, 7),
+    random(-10, 30),
+    random(-5, 30),
     randomRGB(),
     size
   );
