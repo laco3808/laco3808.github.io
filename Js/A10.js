@@ -1,48 +1,106 @@
-async function populate() {
+console.log("Problem 1");
+let sam={
+    "firstName": "Sam", 
+    "department": "Tech", 
+    "designation": "Manager", 
+    "salary": 40000, 
+    "raiseEligible": "true"
 
-    const newRequest = '../Assignments/HR';
-    const request = new Request(newRequest);
-  
-    const response = await fetch(request);
-    const CompanyInfo = await response.json();
-    populateHeader(CompanyInfo);
-    populateCompany(CompanyInfo);
 }
-function populateHeader(obj) {
-    const header = document.querySelector('header');
-    const myH1 = document.createElement('h1');
-    const myH2 = document.createElement('h2');
-    myH1.textContent = obj.companyName;
-    myH2.textContent = obj.companySite;
-    header.appendChild(myH1);
-    header.appendChild(myH2);
-  }
-function populateCompany(obj) {
-    const section = document.querySelector('section');
-    const Employees = obj.Employees;
-  
-    for (const i of Employees) {
-      const myArticle = document.createElement('article');
-      const myH3 = document.createElement('h2');
-      const myPara1 = document.createElement('p');
-      const myPara2 = document.createElement('p');
-      const myPara3 = document.createElement('p');
-      const myPara4 = document.createElement('p');
-      const myList = document.createElement('ul');
-  
-      myH3.textContent = i.firstName;
-      myPara1.textContent = `Department: ${i.department}`;
-      myPara2.textContent = `Designation: ${i.designation}`;
-      myPara3.textContent = `Salary: ${i.salary}`;
-      myPara4.textContent = `Raise Eligeble: ${i.raiseEligible}`;
-  
-  
-      myArticle.appendChild(myH3);
-      myArticle.appendChild(myPara1);
-      myArticle.appendChild(myPara2);
-      myArticle.appendChild(myPara3);
-  
-      section.appendChild(myArticle);
+let mary = {
+    "first name": "Mary", 
+    "department": "Finance", 
+    "designation": "Trainee", 
+    "salary": 18500, 
+    "raiseEligible": "true" 
+}
+let bill = {
+    "firstName": "Bill", 
+    "department": "HR", 
+    "designation": "Executive", 
+    "salary": 21200, 
+    "raiseEligible": "false"
+}
+console.log(sam);
+console.log(mary);
+console.log(bill);
+
+console.log("Problem 2");
+let list = { 
+    "companyName" : "Tech Stars",
+    "CompanySite": "www.techstars.site",
+    "Employees":[
+        {
+            "firstName": "Sam", 
+            "department": "Tech", 
+            "designation": "Manager", 
+            "salary": 40000, 
+            "raiseEligible": "true"
+        },
+        {
+            "first name": "Mary", 
+            "department": "Finance", 
+            "designation": "Trainee", 
+            "salary": 18500, 
+            "raiseEligible": "true" 
+        },
+        {
+            "firstName": "Bill", 
+            "department": "HR", 
+            "designation": "Executive", 
+            "salary": 21200, 
+            "raiseEligible": "false"
+        }
+        ]
     }
-  }
-  populate();
+console.log(list);
+
+console.log("Problem 3")
+const newHire = 
+{
+    "firstName": "Anna", 
+    "department": "Tech", 
+    "designation": "Executive", 
+    "salary": 25600, 
+    "raiseEligible": "false"
+}
+function addNewHire (obj){
+    list.Employees.push(obj);
+}
+addNewHire(newHire);
+
+console.log(list);
+
+console.log("Problem 4");
+
+let TotalS = 0;
+for(i in list.Employees){
+   TotalS= TotalS + list.Employees[i].salary;
+}
+console.log(TotalS);
+
+console.log("Problem 5");
+for(i in list.Employees){
+    let salary = list.Employees[i].salary;
+    if(list.Employees[i].raiseEligible === "true"){
+        Raise(salary, i);
+    }     
+}
+function Raise(cSalary, j){
+    let rSalary = cSalary+(cSalary*.1);
+    list.Employees[j].salary=rSalary;
+    list.Employees[j].raiseEligible === "false";
+}
+
+console.log(list);
+console.log("Problem 6");
+
+for(i in list.Employees){
+    if(list.Employees[i].firstName === "Sam" || list.Employees[i].firstName === "Anna" ){
+        list.Employees[i].wfh= "true";
+    }
+    else{
+    list.Employees[i].wfh= "false";
+    }   
+}
+console.log(list);
