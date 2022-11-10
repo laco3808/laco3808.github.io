@@ -44,6 +44,11 @@ function submit (){
     let PhoneNumber="("+output1.innerHTML+") "+output2.innerHTML+"-"+(x);
     phone.textContent=PhoneNumber;
     again.textContent="How about you try again"
+    if(document.getElementById("phone").style.visibility="hidden"){
+      document.getElementById("after").style.visibility="visible";
+      document.getElementById("again").style.visibility="visible";
+      document.getElementById("phone").style.visibility="visible";
+    }
     slider3.addEventListener('click',() => {
         document.getElementById("after").style.visibility="hidden";
     document.getElementById("phone").style.visibility="hidden";
