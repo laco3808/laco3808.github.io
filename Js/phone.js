@@ -6,6 +6,7 @@ const Reset = document.getElementById("Reset");
 const RickRoll = document.getElementById("RickRoll");
 let index=0;
 let c = 0;
+let J=0;
 const outputs=[output1,output2,output3]//,output4,output5,output6,output7,output77,output9,output99];
 const Final=[];
 for(let g in outputs)
@@ -15,10 +16,9 @@ for(let g in outputs)
 }
 document.getElementById("RickRoll").style.visibility="hidden";
 document.getElementById("Reset").style.visibility="hidden";
-if(index===0){
+if(J===0){
     window.addEventListener('click', showCoords);
 }
-
 RickRoll.addEventListener('click', () => {
     console.log("clcck");
     window.open("https://www.youtube.com/watch?v=PXxIeBWrB6Y", "_blank");
@@ -27,6 +27,8 @@ RickRoll.addEventListener('click', () => {
 
 
 function showCoords(event) { 
+    J=1;
+    console.log("J= ",J);
     if(after.textContent!=""){
         document.getElementById("RickRoll").style.visibility="hidden";
         document.getElementById("Reset").style.visibility="hidden";
@@ -85,6 +87,7 @@ function showCoords(event) {
   }
 
   function restart(outputs){
+    console.log("r-> J=", J);
     index=0;
     c = 0;
     for(let g in outputs)
