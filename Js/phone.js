@@ -23,8 +23,10 @@ RickRoll.addEventListener('click', () => {
     console.log("clcck");
     window.open("https://www.youtube.com/watch?v=PXxIeBWrB6Y", "_blank");
 })
-
-
+function random() {
+    const num = Math.floor(Math.random() * (9 - 1 + 1)) + 1;
+    return num;
+  }
 
 function showCoords(event) { 
     J=1;
@@ -41,16 +43,17 @@ function showCoords(event) {
     var y = event.clientY;
     let Y = Math.floor(y/((screen.height-100)/9));
     let X = Math.floor(x/((screen.width-100)/9));
+    let r= random();
     // var coords = "X coords: " + x + ", Y coords: " + y; 
     // document.getElementById("generated").innerHTML = coords;
-    if(c%2!=0 && index<3){
+    if(r%2!=0 && index<3){
         outputs[index].textContent+=X;
     // outputs[index].style.visibility="visible";
     outputs[index].style.visibility="visible";
         console.log("odds" ,c, index);
         c++;
     }
-    else if(c%2===0 && index<3){
+    else if(r%2===0 && index<3){
         outputs[index].textContent+=Y;
         outputs[index].style.visibility="visible";
         console.log("evens", c, index);
