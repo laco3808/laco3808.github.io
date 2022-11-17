@@ -1,0 +1,34 @@
+body {
+    background: #6c373f;
+    display: flex;
+    justify-content: center;
+    }
+  
+  #bread-box {
+    width: 50%;
+    display: grid;
+    place-items: center;
+    grid-template-areas:
+      "a1 . ."
+      ". a2 ."
+      ". . a3";
+  }
+
+  
+  #bread1 {
+    grid-area: a1;
+    height: 100%;
+    width: 100%;;
+  }
+  
+  #bread {
+    grid-area: a2;
+    height: 100%;
+    width: 100%;
+  }
+  
+  #bread3 {
+    grid-area: a3;
+    height: 80%;
+    width: 80%;
+  }
