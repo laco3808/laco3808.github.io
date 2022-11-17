@@ -13,7 +13,11 @@ body {
       ". a2 ."
       ". . a3";
   }
-
+#header{
+    font-family: 'PT Mono', monospace;
+    font-size: 50px;
+    color: black;
+}
   
   #bread1 {
     grid-area: a1;
