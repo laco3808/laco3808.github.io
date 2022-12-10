@@ -16,7 +16,7 @@ html {
 }
 .game {
     position: absolute;
-    top: 50%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -105,4 +105,72 @@ button {
 
 .board-container.flipped .win {
     transform: rotateY(0) rotateZ(0);
+}
+nav{
+    font-size: 20px;
+    z-index: 1;
+    background-color:rgb(67, 234, 16);;
+    padding: 20px;
+    height: 20px;
+    position:sticky;
+    top:0;
+    width:screen;
+}
+
+nav a{
+    top:0;
+    padding: 0px;
+    display: inline-block; /* to display the menu items as blocks in same line */
+    text-align: center; /* center align the text within the block */
+    width: 17%; /* set each block a width */
+    vertical-align: top; /* align the contents to middle vertically */
+    list-style:none;
+    justify-content: space-evenly;
+    color:#fff;
+    text-decoration: none;
+}
+@media screen and (max-width: 400px) {
+    nav{
+        overflow-x: hidden;
+        overflow-y: hidden;
+        background-color:#5c09af;;
+        padding-bottom: 5px;
+        font-size: 10px;
+        width: screen;
+        height: 25px;
+    }
+    nav a{
+        top: 0;
+        padding: 2px;
+        display: inline-block; /* to display the menu items as blocks in same line */
+        text-align: center; /* center align the text within the block */
+        width: 17%; /* set each block a width */
+        vertical-align: top; /* align the contents to middle vertically */
+        list-style:none;
+        justify-content: space-evenly;
+        color:#fff;
+        text-decoration: none;
+    }
+    .board {
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-gap: 5px;
+    }
+    .card {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+    }
+    #StartB{
+        margin-top: 20px;
+    }
+    .game {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
 }
