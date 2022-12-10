@@ -13,54 +13,70 @@ body {
     color: #fff;
     font-family: "PT Mono", monospace;
     font-style: normal;
-    padding: 1em;
+    padding: 10px;
     margin: 0; 
+    word-break: keep-all;
 }
 article {
     position: relative;
     text-align: left;
     padding: 1em;
-    width: 50em;
-    margin-left: 3em;
-    word-break: break-all;
-    overflow-wrap: break-word; 
+    margin-left: 10px;
+    margin-right: 10px;
+    word-break: keep-all;
+    overflow: hidden;
 }
 h1 {
     text-align: left;
     color: rgb(67, 234, 16);
     font-size: 2em;
     font-family: 'Oswald', serif;
+    word-break: keep-all;
 }
 
 h2 {
     color: rgb(0, 242, 255);
     font-size: 1.7em;
     font-family: 'Oswald', serif;
+    word-break: keep-all;
 }
 h3 {
     color: rgb(254, 7, 217);
     font-size: 1.6em;
     font-family: 'Oswald', serif;
+    word-break: keep-all;
 }
 h4 {
     color: rgb(255, 238, 0);
     font-size: 1.5em;
     font-family:'Oswald', serif;
+    word-break: keep-all;
 }
 h5 {
     color: rgb(255, 0, 0);
     font-size: 1.3em;
     font-family: 'Oswald', serif;
+    word-break: keep-all;
 }
 h6 {
     color: rgb(157, 0, 255);
     font-size: 1.3em;
     font-family: 'Oswald', serif;
+    word-break: keep-all;
+}
+#Hello,#MyName,#IndexP{
+    width: (screen);
+    padding: 0;
+    margin-left: 20px;
+    margin-right: 10px;
 }
 p {
+    padding: 0;
+    margin: 10px;
     font-family: 'PT Mono', monospace;
     font-size: 1.3em;
     color: #fff;
+    word-break: keep-all;
 }
 hr {
     color:#fff;
@@ -131,11 +147,8 @@ body img{
 }
 #LiBo{
     float: right;
-    top: 100px;
-    margin-right: 10em;
-    margin-left: 10em;
-    padding-bottom: 20em;
-    padding-top: 10em;
+    top: 50px;
+    padding: 50px;
     height: 12em;
     width: 12em;
 }
@@ -162,140 +175,222 @@ body img{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2em;
+    justify-content: center;
+  }
+  .Photos {
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    justify-content: center;
   }  
   #BaoDragon, #CupDragon, #TribalBun, #Buff, #Unmask, #AAPI{
     height: 40em;
     width: 40em;
+
   }
   #Jacket1, #Jacket2,#Jacket3 ,#Jacket4{
     height: 40em;
     width: 40em;
   }
+#JacketA{
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+}
+#JacketH{
+    margin: 11px;
+}
+#Wearable{
+    margin: 11px;
+}
+#JacketP1{
+    font-size: 15px;
+    width: screen;
+    padding: 0;
+    margin: 10px;
+    height: auto;
+}
 nav{
+    font-size: 20px;
     z-index: 1;
     background-color:rgb(67, 234, 16);;
     padding: 20px;
     height: 20px;
     position:sticky;
     top:0;
-    width:100%
+    width:screen;
 }
-nav ul{
-    margin:50em;
-    padding:0;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-}
+
 nav a{
-    color:fff;
+    top:0;
+    padding: 0px;
+    display: inline-block; /* to display the menu items as blocks in same line */
+    text-align: center; /* center align the text within the block */
+    width: 17%; /* set each block a width */
+    vertical-align: top; /* align the contents to middle vertically */
+    list-style:none;
+    justify-content: space-evenly;
+    color:#fff;
     text-decoration: none;
-    padding:.5em 1em;
 }
-.grid{
-    margin :0;
-    padding:0;
-    max-width: 980px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap:20px;
+
+
+#ArtArticle,#ArtH1,#Art2{
+    justify-content: center;
+    text-align: center;
 }
 @media screen and (max-width: 400px) {
-    body {
-      font-size: 12px;
-      float: bottom;
+    body{
+        padding: 0;
     }
     body p{
-        width:650px;
-        margin-right: 2em;
-    }
-    h1{
-        left:0px;
-        margin-right: 5em;
-    }
-    body img{
-    float: right;
-    max-height:100%;
-    height: 25em;
-    margin-right: 1em;
-    padding: 1.5em;
-    }
-    article{
-        width: 500px;
-        margin-left:1em
+        padding: 0;
+        justify-content: center;
+        font-size: 20px;
+        width: 375px;
+        height: 600px;
     }
     nav{
+        overflow-x: hidden;
+        overflow-y: hidden;
         background-color:#5c09af;;
         padding-bottom: 5px;
-        font-size: 20px;
-        width: max-content;
-        height: 50px;
-        position:relative;
-    }
-    nav ul{
-        margin:1em;
-        padding:0;
-        list-style:none;
-        display: flex;
-        justify-content: space-between;
+        font-size: 10px;
+        width: screen;
+        height: 25px;
     }
     nav a{
+        top: 0;
+        padding: 2px;
+        display: inline-block; /* to display the menu items as blocks in same line */
+        text-align: center; /* center align the text within the block */
+        width: 17%; /* set each block a width */
+        vertical-align: top; /* align the contents to middle vertically */
+        list-style:none;
+        justify-content: space-evenly;
         color:#fff;
         text-decoration: none;
-        padding:.5em 1em;
     }
-    .photos {
-        z-index: 0;
-        list-style: none;
-        margin: 0;
-        padding-left: .75em;
-        padding-right: .75em;
-        display: grid;
-        float: left;
-        grid-template-columns: 1fr;
-        gap: 1em;
-      }
-      #BaoDragon, #CupDragon, #TribalBun, #Buff, #Unmask, #AAPI{
-        height: 70em;
-        width: 70em;
-      }
-      #Jacket1, #Jacket2,#Jacket3 ,#Jacket4{
-        height: 70em;
-        width: 70em;
-      }
-      #LiBo{
+    article{
+        padding: 0;
+        justify-content: center;
+        font-size: 20px;
+        width: 375px;
+        height: 600px;
+        word-break: keep-all;
+        margin-left:1em;
+    }
+    body img{
+        float: right;
+        max-height:100%;
+        height: 25em;
+        margin-right: 1em;
+        padding: 1.5em;
+    }
+/* ///////////////////////    Home  /////////////////////////////////////// */
+    #Hello{
+        padding-left: 20px;
+        font-size: 30px;
+    }
+    h3{
+        padding-left: 20px;
+        font: 20px;
+    }
+    #LiBo{
         float: left;
         top: 40px;
         margin-right: 1em;
         margin-left: 1em;
-        padding-bottom: 2em;
+        padding-bottom: 10px;
         padding-top: 4em;
-        height: 12em;
-        width: 12em;
     }
-    #JacketH{
-        margin-left: 0;
-        margin-right: 1em;
-    }
-    #Wearable{
-        margin-left: 0;
+/* ///////////////////////    About   /////////////////////////////////////// */
+        #MeIMG{
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            height: 30em;
+        }
+        #About{
+            text-align: center;
+            margin: 15px;
+        }
+/* ///////////////////////    Art    /////////////////////////////////////// */
+    .Photos {
+        z-index: 0;
+        list-style: none;
+        margin: 0;
+        padding: 0px;
 
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: .2em;
+    }
+    #ArtNav{
+        padding: 0;
+        width: 400px;
+    }
+    #AAPI,#Buff,#Unmask,#TribalBun,#BaoDragon,#CupDragon{
+        width: 375px;
+        height: auto;
+    }
+    #ArtArticle{
+        width: screen;
+        justify-content: center;
+        text-align: center;
     }
     #ArtH1,#ArtH2{
-        margin-right:0;
+        width: 370px;
+        text-align: center;
+        font-size: 15px;
+        margin: 20px;
     }
-    #MeIMG{
-        padding-right: 20px;
-        padding-top: 20px;
-        margin-right: 1em;
-        margin-bottom: .25em;
-        height: 30em;
+/* ///////////////////////    Jacket    /////////////////////////////////////// */
+    #JacketH{
+        font-size: 25px;
+        margin: 11px;
     }
-    /*#AboutP{
-        width:fit-content;
-    }*/
-  }
-  @media screen and (min-width: 1900px) {
+    #Wearable{
+        font-size: 17px;
+        margin: 11px;
+    }
+    #Jacket1, #Jacket2,#Jacket3 ,#Jacket4{
+        width: 375px;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+    #JacketA{
+        text-align: center;
+        justify-content: center;
+        margin: 10px;
+        padding: 10px;
+        height: 500px;
+    }
+    #JacketP1{
+        font-size: 15px;
+        width: 370px;
+        padding: 0;
+        margin: 10px;
+        height: auto;
+    }
+    .photos {
+        justify-content: center;
+        z-index: 0;
+        list-style: none;
+        margin: 0;
+        padding: 0px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: .2em;
+    }
+}
+@media screen and (min-width: 1900px) {
     article {
       font-size: 12px;
     }
